@@ -7,7 +7,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKx36l/4sfa96hLyw7bA5y3JdGNg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    /* ===== Gaya Umum ===== */
     body {
       margin: 0;
       font-family: "Poppins", sans-serif;
@@ -16,7 +15,6 @@
       color: #222;
     }
 
-    /* ===== Overlay Latar Belakang ===== */
     body::before {
       content: "";
       position: fixed;
@@ -29,7 +27,6 @@
       z-index: -1;
     }
 
-    /* ===== Navbar ===== */
     .navbar-custom {
             background: linear-gradient(to right, #f3b63a, #f5cd6f);
             box-shadow: 0 3px 8px rgba(0,0,0,0.1);
@@ -37,7 +34,6 @@
             transition: all 0.3s ease-in-out;
         }
 
-        /* Brand logo */
         .navbar-brand img {
             height: 55px;
             transition: transform 0.3s ease;
@@ -47,7 +43,6 @@
             transform: scale(1.08);
         }
 
-        /* Menu link */
         .nav-link {
             color: #2c2c2c !important;
             padding: 0.6rem 1.4rem !important;
@@ -58,7 +53,6 @@
             transition: all 0.3s ease;
         }
 
-        /* Efek garis bawah animasi */
         .nav-link::after {
             content: "";
             position: absolute;
@@ -72,7 +66,6 @@
             transition: transform 0.3s ease;
         }
 
-        /* Hover dan aktif */
         .nav-link:hover::after,
         .nav-link:focus::after {
             transform: translateX(-50%) scaleX(1);
@@ -83,7 +76,6 @@
             text-shadow: 0 0 6px rgba(255,255,255,0.4);
         }
 
-        /* Responsif */
         .navbar-toggler {
             border: none;
             outline: none;
@@ -97,7 +89,6 @@
             gap: 5px;
         }
 
-    /* ===== Kontainer Utama ===== */
     .content-container {
       position: relative;
       display: flex;
@@ -110,7 +101,6 @@
       box-sizing: border-box;
     }
 
-    /* ===== Card Utama ===== */
     .content-card {
       position: relative;
       background: rgba(233, 161, 35, 0.85);
@@ -123,7 +113,6 @@
       overflow: hidden;
     }
 
-    /* ===== Logo Samar bacground ===== */
     .content-container::before {
       content: "";
       position: absolute;
@@ -159,7 +148,6 @@
 </head>
 <body>
 
-  <!-- Header -->
    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
     <div class="container-fluid px-4">
       <a class="navbar-brand" href="#">
@@ -182,7 +170,6 @@
     </div>
   </nav>
 
-  <!-- Konten Tentang -->
   <div class="content-container">
     <div class="content-card">
       <h1>Tentang</h1>
@@ -209,3 +196,4 @@
 </body>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </html>
+
