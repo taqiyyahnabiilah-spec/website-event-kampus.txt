@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <style>
+        /* ======== BASE STYLING ======== */
         body {
             background: linear-gradient(to bottom right, #fff6da, #fff1c1);
             font-family: 'Poppins', Arial, sans-serif;
@@ -16,22 +17,25 @@
             padding: 0;
         }
 
+        /* ======== NAVBAR ======== */
         .navbar-custom {
             background: linear-gradient(to right, #f3b63a, #f5cd6f);
             box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-            padding: 0.7rem 2rem;
+            padding: 0.7rem 2rem; /* tambah ruang atas-bawah */
             transition: all 0.3s ease-in-out;
         }
 
+        /* Brand logo */
         .navbar-brand img {
             height: 55px;
             transition: transform 0.3s ease;
         }
 
         .navbar-brand img:hover {
-            transform: scale(1.08);
+            transform: scale(1.08); /* efek hover lembut di logo */
         }
 
+        /* Menu link */
         .nav-link {
             color: #2c2c2c !important;
             padding: 0.6rem 1.4rem !important;
@@ -42,6 +46,7 @@
             transition: all 0.3s ease;
         }
 
+        /* Efek garis bawah animasi */
         .nav-link::after {
             content: "";
             position: absolute;
@@ -55,6 +60,7 @@
             transition: transform 0.3s ease;
         }
 
+        /* Hover dan aktif */
         .nav-link:hover::after,
         .nav-link:focus::after {
             transform: translateX(-50%) scaleX(1);
@@ -65,6 +71,7 @@
             text-shadow: 0 0 6px rgba(255,255,255,0.4);
         }
 
+        /* Responsif */
         .navbar-toggler {
             border: none;
             outline: none;
@@ -78,12 +85,13 @@
             gap: 5px;
         }
 
+        /* ======== SEMINAR CARD ======== */
         .seminar-card {
             max-width: 900px;
             margin: 50px auto;
             padding: 40px 60px;
             border-radius: 10px;
-            background: none;
+            background: none; /* tidak ada background putih */
             box-shadow: none;
         }
 
@@ -91,6 +99,7 @@
             transform: translateY(-3px);
         }
 
+        /* ======== DETAIL ITEM ======== */
         .detail-item {
             margin-bottom: 0.5rem;
             font-size: 1.05rem;
@@ -104,6 +113,7 @@
             margin-right: 10px;
         }
 
+        /* ======== THEME QUOTE ======== */
         .theme-quote {
             display: block;
             font-size: 1.15rem;
@@ -114,6 +124,7 @@
             padding-left: 10px;
         }
 
+        /* ======== CAROUSEL CONTROL ======== */
         .carousel-control-prev,
         .carousel-control-next {
             width: 45px;
@@ -135,6 +146,33 @@
             filter: invert(30%) sepia(20%) saturate(600%) hue-rotate(180deg);
         }
 
+         /* ======== Tombol bawah ======== */
+        .floating-toolbar {
+        position: fixed;
+        bottom: 25px;
+        left: 25px;
+        background-color: #e6a730;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 8px 14px;
+        border-radius: 25px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        z-index: 1000;
+        }
+
+        .floating-toolbar i {
+        color: #000;
+        font-size: 16px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        }
+
+        .floating-toolbar i:hover {
+        transform: scale(1.2);
+        }
+
+        /* ======== RESPONSIVE ======== */
         @media (max-width: 768px) {
             .seminar-card {
                 padding: 30px 25px;
@@ -158,20 +196,13 @@
             </button>
 
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="beranda.html">Beranda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="beranda.html#kontak">Kontak</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Tentang.html">Tentang</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.html">Login</a>
-                    </li>
-                </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../admin/beranda.html">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link" href="../admin/beranda.html#kontak">Kontak</a></li>
+                <li class="nav-item"><a class="nav-link" href="../admin/Tentang.html">Tentang</a></li>
+                <li class="nav-item"><a class="nav-link" href="../admin/tampilanadmin.html">Admin</a></li>
+                <li class="nav-item"><a class="nav-link" href="../login.html">Login</a></li>
+            </ul>
             </div>
         </div>
     </nav>
@@ -334,9 +365,14 @@
             <button type="button" data-bs-target="#seminarCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#seminarCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
+
+        <div class="floating-toolbar">
+            <i class="fa-solid fa-message"></i>
+            <i class="fa-solid fa-pen"></i>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
         
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
-
 </html>
